@@ -67,7 +67,7 @@ use constant {
 	CLIENT			=> 'Perl-ljsm/2.8; sasha_nikolaev@yahoo.com',
 	CVSVERSION		=> '$Revision: 2.8 $', # don't touch this
 	SAVE_PICS		=> 1,	# download standard icons (1) usepics (2) or all graphics referenced by post (3)
-	BASE_DOMAIN		=> 'lj.rossia.org'
+	BASE_DOMAIN		=> 'livejournal.com'
 };
 
 # ===================================================================
