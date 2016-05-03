@@ -949,7 +949,8 @@ sub process_html_file {
 	$title = '';
 	while ($line = <DF>) {
 		$kw = $1 if ($line =~ /<meta name="keywords" content="(.*?)">/);
-		$title = $1 if ($line =~ m#<font face=["']Arial,Helvetica['"] size=['"]?\+1['"]?><i><b>(.*?)</b></i>#i);
+		#$title = $1 if ($line =~ m#<font face=["']Arial,Helvetica['"] size=['"]?\+1['"]?><i><b>(.*?)</b></i>#i);
+		$title = $1 if ($line =~ /<h1 class=" b-singlepost-title entry-title p-name " ng-non-bindable >(.*?) <\/h1>/);
 		$title = "<i>$1</i>" if ($line =~ m#<span class="heading">Error</span><br />(.*)$#i);
 		$title = "<i>$1</i>" if ($line =~ m#^<H1>Error</H1><P>(.*)</P>$#i);
 		$date = $1 if (!$date && $line =~ m#href="@{[BASE_URL]}users/\w+/day/\d\d\d\d/\d\d/(\d{1,2})"#);
